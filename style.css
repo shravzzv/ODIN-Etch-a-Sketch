@@ -10,6 +10,7 @@ html {
 
 body {
   margin: 0;
+  padding: 2em;
 }
 
 .container {
@@ -29,4 +30,13 @@ body {
 
 .box:hover {
   background-color: black;
+}
+
+.button {
+  padding: 0.5em 1em;
+  margin: 0.2em 0;
+  cursor: pointer;
+  background-color: bisque;
+  border-radius: 10px;
+  font-size: 1.1rem;
 }

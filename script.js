@@ -7,12 +7,13 @@ for (let i = 0; i < 256; i++) {
 }
 
 const button = document.createElement('button')
-button.innerText = 'set squares'
+button.innerText = 'create new grid'
+button.classList.add('button')
 document.body.insertBefore(button, container)
 
 button.addEventListener('click', (e) => {
-  const squaresPerSide = parseInt(
-    prompt('How many number of squares per side?', 10)
+  let squaresPerSide = parseInt(
+    prompt('How many number of squares do you want per side?', 10)
   )
 
   // remove existing grid
