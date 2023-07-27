@@ -15,6 +15,11 @@ button.addEventListener('click', (e) => {
   let squaresPerSide = parseInt(
     prompt('How many number of squares do you want per side?', 10)
   )
+  if (squaresPerSide > 100) {
+    squaresPerSide = parseInt(
+      prompt('The max number of squares per side can be 100!', 100)
+    )
+  }
 
   // remove existing grid
   const existingBoxes = document.querySelectorAll('.box')
