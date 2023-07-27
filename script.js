@@ -15,9 +15,12 @@ button.addEventListener('click', (e) => {
   let squaresPerSide = parseInt(
     prompt('How many number of squares do you want per side?', 10)
   )
-  if (squaresPerSide > 100) {
+  while (squaresPerSide > 100 || squaresPerSide < 0) {
     squaresPerSide = parseInt(
-      prompt('The max number of squares per side can be 100!', 100)
+      prompt(
+        'The number of squares per side can be between 0 and 100 only!',
+        100
+      )
     )
   }
 
