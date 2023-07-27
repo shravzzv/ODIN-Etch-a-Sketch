@@ -1,0 +1,32 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 960px;
+  height: 480px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.box {
+  border: 2px solid gray;
+  height: calc(100% / 16);
+  flex-basis: calc(100% / 16);
+  cursor: pointer;
+}
+
+.box:hover {
+  background-color: black;
+}
