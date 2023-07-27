@@ -32,8 +32,23 @@ button.addEventListener('click', (e) => {
     box.style.flexBasis = `calc(100% / ${squaresPerSide})`
     container.appendChild(box)
 
-    box.addEventListener('mouseover', (e) => {
-      console.dir(e.target)
+    box.addEventListener('mouseenter', (e) => {
+      box.style.backgroundColor = getRandomRGB()
+    })
+    box.addEventListener('mouseleave', (e) => {
+      box.style.backgroundColor = 'transparent'
     })
   }
 })
+
+const getRandomRGB = () =>
+  `rgb(${getRandomIntInclusive(0, 255)}, ${getRandomIntInclusive(
+    0,
+    255
+  )}, ${getRandomIntInclusive(0, 255)})`
+
+function getRandomIntInclusive(min, max) {
+  min = Math.ceil(min)
+  max = Math.floor(max)
+  return Math.floor(Math.random() * (max - min + 1) + min)
+}
